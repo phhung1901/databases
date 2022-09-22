@@ -16,8 +16,10 @@ dụng để giao tiếp với cơ sở dữ liệu.
 
 *DDL – Ngôn ngữ định nghĩa dữ liệu (Data Definition Language)* bao gồm các lệnh SQL có thể được sử dụng để xác định lược đồ cơ sở dữ liệu.
 ![](./img/DDL.png)
+
 *DML – Ngôn ngữ thao tác dữ liệu(Data Manipulation Language)* 
 ![](./img/DML.png)
+
 *DCL – Ngôn ngữ điều khiển dữ liệu (Data Control Language)* bao gồm các lệnh như GRANT và REVOKE chủ yếu giải quyết các quyền, quyền hạn và các điều khiển khác của hệ thống cơ sở dữ liệu. 
 
 ## NoSQL
