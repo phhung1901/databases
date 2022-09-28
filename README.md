@@ -18,6 +18,7 @@ dụng để giao tiếp với cơ sở dữ liệu.
 ![](./img/DDL.png)
 
 *DML – Ngôn ngữ thao tác dữ liệu(Data Manipulation Language)* 
+
 ![](./img/DML.png)
 
 *DCL – Ngôn ngữ điều khiển dữ liệu (Data Control Language)* bao gồm các lệnh như GRANT và REVOKE chủ yếu giải quyết các quyền, quyền hạn và các điều khiển khác của hệ thống cơ sở dữ liệu. 
@@ -168,12 +169,34 @@ dụng để giao tiếp với cơ sở dữ liệu.
 ### Giới thiệu
  - NewSQL là loại CSDL dựa trên các nguyên lý CSDL quan hệ và cung cấp khả năng mở rộng như NoSQL.
  - Nó kết hợp độ tin cậy của SQL với tốc độ và hiệu suất của NoSQL.
- - NewSQL là một hệ thống cơ sở dữ liệu duy nhất kết hợp việc tuân thủ [ACID](https://phoenixnap.com/kb/acid-vs-base) với việc mở rộng quy mô theo chiều ngang . 
+ - NewSQL là một hệ thống cơ sở dữ liệu duy nhất kết hợp việc tuân thủ [ACID](https://phoenixnap.com/kb/acid-vs-base)(Tính nguyên tử, nhất quán, cô lập và bền vững) với việc mở rộng quy mô theo chiều ngang . 
 
  ![](./img/ACID.png)
+- Phân vùng: 
+  - Hầu hết tất cả các hệ thống quản lý cơ sở dữ liệu NewSQL đều mở rộng quy mô bằng cách chia cơ sở dữ liệu thành các tập con riêng biệt được gọi là 
+  phân vùng hoặc phân đoạn. 
+  - Các bảng được chia theo chiều ngang thành nhiều đoạn có ranh giới dựa trên giá trị cột.
+  - Các đoạn liên quan từ các bảng khác nhau được nối để tạo phân vùng.
+  
+  ![](https://logicalread.com/media/496014/Figure-2_1000x610.jpg)
 
+- Nhân bản: 
+  - Cho phép người dùng CSDL tạo và duy trì các bản sao của CSDL hoặc 1 phần của CSDL.
+  - Người dùng có thể cập nhật các bản sao đồng thời hoặc cập nhật 1 nút và chuyển trạng thái kết quả sang các bản sao khác.
+- Chỉ mục thứ cấp:
+  - Cho phép người dùng CSDL truy cập hiệu quả vào các bản ghi CSDL bằng cách sử dụng 1 giá trị khác với khóa chính.
+  ![](https://prepinsta.com/wp-content/uploads/2021/05/Secondary-Indexing.webp)
+- Kiểm soát đồng thời: 
+  - Giải quyết các sự cố có thể xảy ra trong hệ thống nhiều người dùng trong khi nhiều người dùng truy cập hoặc sửa đổi dữ liệu đồng thời.
+- Phục hồi sự cố: 
+  - NewSQL databases có cơ chế cho phép chúng khôi phục dữ liệu và chuyển sang trạng thái nhất quán khi hệ thống gặp sự cố.
 ### Tính năng 
-
+- Lưu trữ trong bộ nhớ và xử lý dữ liệu cung cấp kết quả truy vấn nhanh chóng.
+- Phân vùng chia tỷ lệ cơ sở dữ liệu thành các đơn vị. Các truy vấn thực thi trên nhiều phân đoạn và kết hợp thành một kết quả duy nhất.
+- Thuộc tính ACID bảo toàn các tính năng của RDBMS.
+- Lập chỉ mục thứ cấp dẫn đến việc xử lý truy vấn và truy xuất thông tin nhanh hơn.
+- Tính khả dụng cao do cơ chế nhân bản cơ sở dữ liệu.
+- Cơ chế khôi phục sự cố tích hợp mang lại khả năng chịu lỗi và giảm thiểu thời gian chết.
 
 ### Khác nhau giữa SQL - NoSQL - NewSQL
 
@@ -187,3 +210,20 @@ dụng để giao tiếp với cơ sở dữ liệu.
 | Distributed       | No                     | Yes                     | Yes                         |
 | High availability | Custom                 | Auto                    | Built-in                    |
 | Queries           | Low complexity queries | High complexity queries | Both                        |
+
+### Một số NewSQL database
+#### Clustrix DB
+- Là 1 hệ thống tự quản lý tự thực hiện tất cả các hoạt động phức tạp và thêm các máy chủ để tăng dung lượng, 
+công suất và loại bỏ nguy cơ chậm trễ thời gian do lỗi phần cứng. 
+
+ ![](https://phoenixnap.com/kb/wp-content/uploads/2022/03/clustrixdb-logo.png)
+ 
+#### NuoDB 
+- Là 1 CSDL phân tán theo địa lý với khả năng mở rộng linh hoạt. Cơ sở dữ liệu ánh xạ dữ liệu qua các điểm khác nhau trong khi vẫn tuân thủ ACID.
+
+![](https://phoenixnap.com/kb/wp-content/uploads/2022/03/nuodb-logo.png)
+
+#### CockroachDB
+- CSQL cung cấp tính nhất quán dữ liệu mạnh mẽ và hoạt động tốt với các tài nguyên có độ trễ thấp.
+
+![](https://phoenixnap.com/kb/wp-content/uploads/2022/03/cockroachdb-logo.png)
