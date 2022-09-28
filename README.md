@@ -1,5 +1,5 @@
 # Cơ sở dữ liệu
-## DBMS
+## DBMS - RDBMS
 - **DBMS** là viết tắt của **Database Management System**, có nghĩa là **Hệ quản trị cơ sở dữ liệu**.
 - DBMS là phần mềm được thiết kế để có thể xác định, tiến hành các thao tác, truy xuất và quản lý dữ liệu trong Cơ sở dữ liệu.
 - Một vài DBMS phổ biến:
@@ -8,6 +8,8 @@
   - Oracle
   - dBASE
   - FoxPro
+ - **RDBMS** là viết tắt của **Relational Database Management System** có nghĩa là hệ quản trị cơ sỡ dữ liệu quan hệ.
+ - RDBMS là cơ sở cho SQL, và cho tất cả các hệ thống cơ sở dữ liệu hiện đại như MS SQL Server, IBM DB2, Oracle, MySQL và Microsoft Access.
 ## SQL
 - **SQL** là viết tắt của **Structured Query Language**, có nghĩa là ngôn ngữ truy vấn có cấu trúc được sử 
 dụng để giao tiếp với cơ sở dữ liệu.
